@@ -19,14 +19,14 @@ export class CreateUserUseCase {
         const user = new User(data)
         await this.userRepository.save(user)
 
-        this.mailProvider.sendMail({
+        await this.mailProvider.sendMail({
             to: {
                 name: data.name,
                 email: data.email
             },
             from: {
-                name: "Nome",
-                email: "email.example.com"
+                name: "Name",
+                email: "cox3site59@gmail.com"
             },
             subject: "Sejá bem vindo!",
             body: "<p>Você já pode fazer login em nossa plataforma.</p>"
