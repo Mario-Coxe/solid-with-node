@@ -1,16 +1,17 @@
 import { User } from "../../entities/Users";
 import { IUsersRepository } from "../IUserRepository";
 
-export class PostgresUserRepository implements IUsersRepository {
-    private users: User[] = []
+const usersDB: User[] = [];
 
+export class PostgresUserRepository implements IUsersRepository {
     async findByEmail(email: string): Promise<User> {
-        const user = this.users.find(user => user.email === email)
-        return user
+        const user = usersDB.find(user => user.email === email);
+        return user;
     }
 
     save(user: User): Promise<void> {
-        this.users.push(user)
+        console.log("Salvando usuário:", user);
+        usersDB.push(user);
         return Promise.resolve();
     }
 }

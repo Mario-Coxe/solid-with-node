@@ -11,6 +11,7 @@ export class CreateUserUseCase {
 
     async execute(data: ICreateUserRequestDTO) {
         const userAlreadyExists = await this.userRepository.findByEmail(data.email)
+        console.log(JSON.stringify(userAlreadyExists))
 
         if (userAlreadyExists) {
             throw new Error("User already exists.")
