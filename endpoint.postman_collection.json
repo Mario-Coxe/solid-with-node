@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "bf3cf246-015b-4627-b2b9-144e333cc2fb",
+		"name": "Estudos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32839951"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3333/users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"coxe@gmail.com\",\r\n  \"email\": \"mariocoxedev@gmail.com\",\r\n  \"password\": \"StrongP@ss1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
